@@ -1,0 +1,39 @@
+body {
+    background-color: #fcebb6;
+    color: #221811;
+    font-family: 'EB Garamond', Tahoma, Arial, sans-serif;
+}
+
+header {
+    color: #8c3826;
+    background-color: #d2b48c;
+    text-align: center;
+}
+
+h1 {
+    line-height: 2 em;
+    margin: 0.2em 0;
+}
+
+h2 {
+    color: #8c3826;
+}
+
+nav {
+    text-align: center;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    font-size: small;
+    font-style: italic;
+    background-color: #D2b48c;
+}
+
+#wrapper {
+    width: 80%;
+    background-color: #FEFAEB;
+    margin-right: auto;
+    margin-left: auto;
+}
