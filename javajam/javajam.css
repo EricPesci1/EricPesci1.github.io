@@ -1,3 +1,5 @@
+* { box-sizing: border-box; }
+
 body {
     background-image: url(Images/fadedroad50.jpg);
     background-repeat: no-repeat;
@@ -9,9 +11,21 @@ body {
 header {
     padding-top: 5px;
     padding-bottom: 5px;
-    color: #8c3826;
+    color: #231814;
     background-color: #d2b48c;
-    text-align: center;
+    background-image: url('Images/coffeelogo.jpg');
+    background-repeat: no-repeat;
+    padding-left: 240px;
+}
+
+header a:link, header a:visited{
+    color: #231814;
+    text-decoration: none;
+}
+
+header a:hover{
+    color: #FEF6C2;
+    text-decoration: none;
 }
 
 h1 {
@@ -30,6 +44,25 @@ nav {
     text-align: center;
     font-weight: bold;
     text-decoration: none;
+    float: left;
+    width: 200px;
+}
+
+nav a:link{
+    color: #FEF6C2;
+}
+
+nav a:visited{
+    color: #D2B48C;
+}
+
+nav a:hover{
+    color: #CC9933;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-left: 0;
 }
 
 footer {
@@ -46,9 +79,10 @@ footer {
     min-width: 900px;
     max-width: 1280px;
     box-shadow: 10px 10px 5px #888888;
-    background-color: #FEFAEB;
+    background-color: #231814;
     margin-right: auto;
     margin-left: auto;
+    padding: 0;
 }
 
 h4 {
@@ -56,17 +90,44 @@ h4 {
     background-color: #d2b48c;
     padding-left: 0.5em;
     padding-bottom: 0.25em;
+    text-transform: uppercase;
+    border-bottom: 2px solid black;
+    padding-bottom: 0;
+    clear: left;
 }
+
+.floatleft {
+    float: left;
+    margin: 0 2em 2em 0;
+}
+
 h3, dt {
     color: #8c3826;
 }
 
 main {
     padding: 0 2em 2em 2em;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 200px;
+    padding-top: 0;
+    background-color: #FEF6C2;
+    overflow: auto;
 }
+
+main h2, main h3, main h4, main p, main div, main ul, main dl {
+    padding-left: 3em;
+    padding-right: 2em;
+}   
 
 .details {
     padding: 0 20% 0 20%;
+    overflow: auto;
+}
+
+.onethird {
+    width: 33%;
+    float: left;
 }
 
 img {
@@ -78,4 +139,18 @@ img {
 #homehero {
     height: 300px;
     background-size: cover;
+    background-size: 100% 100%;
+}
+
+#heromugs {
+    background-image: url('Images/heromugs.jpg');
+    height: 300px;
+    background-size: 100% 100%;
+}
+
+#heroguitar {
+    background-image: url('Images/heroguitar.jpg');
+    height: 300px;
+    background-size: cover;
+    background-size: 100% 100%;
 }
