@@ -1,51 +1,105 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Skills — Eric Pesci</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container">
-      <h1 class="site-title">Skills & Certifications</h1>
-      <nav class="site-nav">
-        <a href="index.html">Home</a>
-        <a href="experience.html">Experience</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="author" content="Eric Pesci" />
+    <meta name="description" content="My Professional Website and Portfolio" />
+    <meta
+      name="keywords"
+      content="portfolio, professional, Eric Pesci, data engineering, information systems"
+    />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Skills - Eric Pesci</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link rel="stylesheet" href="CSS Styling/ericpesci.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="site-title">Skills & Certifications</h1>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="experience.html">Experience</a>
+          <a href="skills.html">Skills</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-  <main class="container">
-    <section class="card">
-      <h2>Skills</h2>
-      <table class="skills-table">
-        <thead>
-          <tr><th>Category</th><th>Details</th><th>Certifications</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Languages</td><td>Python, SQL, HTML, JavaScript</td><td>Microsoft Excel Associate</td></tr>
-          <tr><td>Data & Cloud</td><td>MS SQL Server, MS Azure, Tableau, AWS, Google Analytics</td><td>Google Analytics Certification</td></tr>
-          <tr><td>Design & Tools</td><td>Adobe Premiere Pro, Photoshop, Illustrator, VS Code, GitHub</td><td>—</td></tr>
-          <tr><td>Other</td><td>Project Management, Financial Forecasting, Bookkeeping</td><td>—</td></tr>
-        </tbody>
-      </table>
-    </section>
-  </main>
+    <main class="container">
+      <section class="card">
+        <h2>Skills</h2>
+        
+        <!-- Table displaying skills and certifications -->
+        <table class="skills-table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Details</th>
+              <th>Certifications</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Category">Languages</td>
+              <td data-label="Details">Python, SQL, HTML, JavaScript</td>
+              <td data-label="Certifications">Microsoft Excel Associate</td>
+            </tr>
+            <tr>
+              <td data-label="Category">Data & Cloud</td>
+              <td data-label="Details">
+                MS SQL Server, MS Azure, Tableau, AWS, Google Analytics
+              </td>
+              <td data-label="Certifications">
+                Google Analytics Certification
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Category">Design & Tools</td>
+              <td data-label="Details">
+                Adobe Premiere Pro, Photoshop, Illustrator, VS Code, GitHub
+              </td>
+              <td data-label="Certifications">—</td>
+            </tr>
+            <tr>
+              <td data-label="Category">Other</td>
+              <td data-label="Details">
+                Project Management, Financial Forecasting, Bookkeeping
+              </td>
+              <td data-label="Certifications">—</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div><a href="https://www.linkedin.com/in/eric-pesci" target="_blank" rel="noopener" class="linkedin">LinkedIn</a></div>
-      <div class="copyright">© Eric Pesci — 2025</div>
-    </div>
-  </footer>
-  <script src="nav.js" defer></script>
-</body>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <a
+            href="https://www.linkedin.com/in/eric-pesci"
+            target="_blank"
+            rel="noopener"
+            class="linkedin"
+            >LinkedIn</a
+          >
+        </div>
+        <div class="copyright">© Eric Pesci — 2025</div>
+      </div>
+    </footer>
+    
+    <script src="JS Scripts/nav.js" defer></script>
+  </body>
 </html>

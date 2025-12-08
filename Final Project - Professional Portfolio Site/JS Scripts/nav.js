@@ -1,15 +1,18 @@
+//JavaScript for navigation bar movement and mobile dropdown menu
+//Defining a function to handle navigation bar indicator movement
+//Note: I did use AI to help me learn some new operations and techniques for making an awesome nav. I had it show me what it was doing, and explain what each part accomplished.
 document.addEventListener('DOMContentLoaded', function(){
   const nav = document.querySelector('.site-nav');
   if(!nav) return;
   const links = Array.from(nav.querySelectorAll('a'));
   const header = nav.closest('.site-header');
 
-  // create indicator
+  //Creating an indicator element for the navigation bar
   const indicator = document.createElement('div');
   indicator.className = 'nav-indicator';
   nav.style.position = 'relative';
   nav.appendChild(indicator);
-
+// Function to move indicator to element
   function moveTo(el){
     if(!el) return;
     const rect = el.getBoundingClientRect();
@@ -17,18 +20,18 @@ document.addEventListener('DOMContentLoaded', function(){
     const left = rect.left - navRect.left + nav.scrollLeft;
     indicator.style.width = rect.width + 'px';
     indicator.style.transform = `translateX(${left}px)`;
-    // mark active
+    //This part highlights the active link by toggling the 'active' class
     links.forEach(a=>a.classList.toggle('active', a===el));
   }
 
-  // choose active link by pathname
+  // Choose active link by pathname
   const path = window.location.pathname.split('/').pop() || 'index.html';
   let active = links.find(a => a.getAttribute('href') === path) || links.find(a => a.classList.contains('active')) || links[0];
 
-  // initial placement after layout
+  // Sets the initial position for the indicator after layout
   setTimeout(()=> moveTo(active), 50);
 
-  // desktop nav behavior (indicator)
+  // Desktop nav behavior (indicator) for each link for each event
   links.forEach(link => {
     link.addEventListener('mouseenter', ()=> moveTo(link));
     link.addEventListener('focus', ()=> moveTo(link));
@@ -38,20 +41,20 @@ document.addEventListener('DOMContentLoaded', function(){
   nav.addEventListener('mouseleave', ()=> moveTo(active));
   window.addEventListener('resize', ()=> moveTo(active));
 
-  // mobile dropdown behavior (<600px)
+  // Mobile dropdown behavior (<600px), this corresponds to the media query in the CSS
   if(header){
     const container = header.querySelector('.container');
     const headerContainer = header.querySelector('.site-header .container') || container;
     
-    // create hamburger toggle button
+    // This helps create a hamburger icon for the mobile dropdown menu when it's closed
     const toggle = document.createElement('button');
     toggle.className = 'nav-toggle';
     toggle.innerHTML = '☰';
-    toggle.style.display = 'none'; // hidden by default, shown in media query
+    toggle.style.display = 'none'; // This part is hidden by default, shown in media query
     toggle.setAttribute('type', 'button');
     toggle.setAttribute('aria-label', 'Toggle navigation');
     
-    // inject toggle into container right before nav or after title
+    // This injects toggle into container right before nav or after title
     if(headerContainer){
       headerContainer.appendChild(toggle);
     }
@@ -62,10 +65,10 @@ document.addEventListener('DOMContentLoaded', function(){
       }
     }
 
-    // toggle on button click
+    // Toggle on button click
     toggle.addEventListener('click', toggleNav);
 
-    // auto-open on header hover for mobile
+    // Auto-open on header hover for mobile
     header.addEventListener('mouseenter', function(){
       if(window.innerWidth <= 600){
         nav.classList.add('active');
@@ -77,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function(){
       }
     });
 
-    // close nav when a link is clicked
+    // Close nav when a link is clicked
     links.forEach(link => {
       link.addEventListener('click', function(){
         if(window.innerWidth <= 600){

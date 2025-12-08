@@ -1,59 +1,119 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Projects — Eric Pesci</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container">
-      <h1 class="site-title">Projects</h1>
-      <nav class="site-nav">
-        <a href="index.html">Home</a>
-        <a href="experience.html">Experience</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <section class="card">
-      <h2>Projects, Hobbies, and Interests</h2>
-      <p>Explore what keeps me busy in my free time and some of the things I find interesting. More things to come!</p>
-      <div class="projects-grid">
-        <div class="project-thumb">
-          <img src="images/Cubing.jpg" alt="Utah Rubik's Cube Championship winner" style="width:120px;height:120px;margin-bottom:12px;border-radius:8px;object-fit:cover;object-position:50% 35%">
-          <strong>4x Utah Rubik's Cube Champion</strong>
-          <p style="color:var(--muted);font-size:0.95rem">Won the Utah Rubik's Cube Championship for the fourth consecutive year on November 30, 2025. It's been an incredible journey to get here, and cubing has been an amazing way to channel my competitive spirit. My personal record is 5.39 seconds, and I have achieved a top 500 world ranking and 66 gold medals.</p>
-          <p style="margin-top:12px">
-            <a class="download-btn" href="https://www.worldcubeassociation.org/persons/2015PESC01" target="_blank" rel="noopener">View Competition Results Here</a>
-          </p>
-        </div>
-        <div class="project-thumb">
-          <img src="images/Powerlifting.jpg" alt="Powerlifting team" style="width:120px;height:120px;margin-bottom:12px;border-radius:8px;object-fit:cover;object-position:50% 40%">
-          <strong>Utah State University Powerlifting Team</strong>
-          <p style="color:var(--muted);font-size:0.95rem">Member of the USU Powerlifting Team — competing and training while balancing academics and athletics. Personal tested lifts include a 265 lb bench, 425 lb squat, and 480 lb deadlift in the 165 lb class. I enjoy competing with the best and representing my university in the powerlifting space.</p>
-          <p style="margin-top:12px">
-            <a class="download-btn" href="https://www.openpowerlifting.org/u/ericpesci" target="_blank" rel="noopener">See My Lifting Results</a>
-          </p>
-        </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="author" content="Eric Pesci" />
+    <meta name="description" content="My Professional Website and Portfolio" />
+    <meta
+      name="keywords"
+      content="portfolio, professional, Eric Pesci, data engineering, information systems"
+    />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Projects - Eric Pesci</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link rel="stylesheet" href="CSS Styling/ericpesci.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="site-title">Projects</h1>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="experience.html">Experience</a>
+          <a href="skills.html">Skills</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </nav>
       </div>
-    </section>
-  </main>
+    </header>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div><a href="https://www.linkedin.com/in/eric-pesci" target="_blank" rel="noopener" class="linkedin">LinkedIn</a></div>
-      <div class="copyright">© Eric Pesci — 2025</div>
-    </div>
-  </footer>
-  <script src="nav.js" defer></script>
-</body>
+    <main class="container">
+      <section class="card">
+        <h2>Projects, Hobbies, and Interests</h2>
+        <p>Explore what keeps me busy in my free time. More things to come!</p>
+        <!-- Grid container for my projects, with another div inside for the thumbnails along with descriptions -->
+        <div class="projects-grid">
+          <div class="project-thumb">
+            <img
+              src="images/Cubing.jpg"
+              alt="Utah Rubik's Cube Championship winner"
+              class="project-cubing-img"
+            />
+            <strong class="project-card-title"
+              >4x Utah Rubik's Cube Champion</strong
+            >
+            <p class="project-description">
+              Won the Utah Rubik's Cube Championship for the fourth consecutive
+              year on November 30, 2025. It's been an incredible journey to get
+              here, and cubing has been an amazing way to channel my competitive
+              spirit. My personal record is 5.39 seconds, and I have achieved a
+              top 500 world ranking and 66 gold medals.
+            </p>
+            <p class="project-link">
+              <a
+                class="download-btn"
+                href="https://www.worldcubeassociation.org/persons/2015PESC01"
+                target="_blank"
+                rel="noopener"
+                >View Competition Results Here</a
+              >
+            </p>
+          </div>
+          <div class="project-thumb">
+            <img
+              src="images/Powerlifting.jpg"
+              alt="Powerlifting team"
+              class="project-powerlifting-img"
+            />
+            <strong class="project-card-title"
+              >Utah State University Powerlifting Team</strong
+            >
+            <p class="project-description">
+              Member of the USU Powerlifting Team — competing and training while
+              balancing academics and athletics. Personal tested lifts include a
+              265 lb bench, 425 lb squat, and 480 lb deadlift in the 165 lb
+              class. I enjoy competing with the best and representing my
+              university in the powerlifting space.
+            </p>
+            <p class="project-link">
+              <a
+                class="download-btn"
+                href="https://www.openpowerlifting.org/u/ericpesci"
+                target="_blank"
+                rel="noopener"
+                >See My Lifting Results</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <a
+            href="https://www.linkedin.com/in/eric-pesci"
+            target="_blank"
+            rel="noopener"
+            class="linkedin"
+            >LinkedIn</a
+          >
+        </div>
+        <div class="copyright">© Eric Pesci — 2025</div>
+      </div>
+    </footer>
+    <script src="JS Scripts/nav.js" defer></script>
+  </body>
 </html>
