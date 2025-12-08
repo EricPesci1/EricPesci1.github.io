@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Contact — Eric Pesci</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+      rel="stylesheet"/>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="site-title">Contact</h1>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="experience.html">Experience</a>
+          <a href="skills.html">Skills</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>Send me an email!</h2>
+        <form
+          id="contactForm"
+          class="contact-form"
+          onsubmit="handleContact(event)"
+        >
+          <label for="cf-name">Your name</label>
+          <input
+            id="cf-name"
+            name="name"
+            type="text"
+            required
+            placeholder="Full name"
+          />
+
+          <label for="cf-subject">Subject</label>
+          <input
+            id="cf-subject"
+            name="subject"
+            type="text"
+            required
+            placeholder="Subject"
+          />
+
+          <label for="cf-message">Message</label>
+          <textarea
+            id="cf-message"
+            name="message"
+            rows="8"
+            required
+            placeholder="Write your message here"
+          ></textarea>
+
+          <div
+            style="
+              display: flex;
+              gap: 8px;
+              align-items: center;
+              margin-top: 8px;
+            "
+          >
+            <button type="submit" class="download-btn">Send Message</button>
+            <div
+              id="cf-status"
+              style="color: var(--muted); font-size: 0.95rem"
+            ></div>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <a
+            href="https://www.linkedin.com/in/eric-pesci"
+            target="_blank"
+            rel="noopener"
+            class="linkedin"
+            >LinkedIn</a
+          >
+        </div>
+        <div class="copyright">© Eric Pesci — 2025</div>
+      </div>
+    </footer>
+
+    <script>
+      function handleContact(e) {
+        e.preventDefault();
+        const name = document.getElementById("cf-name").value.trim();
+        const subject = document.getElementById("cf-subject").value.trim();
+        const message = document.getElementById("cf-message").value.trim();
+        const status = document.getElementById("cf-status");
+        if (!name || !subject || !message) {
+          status.textContent = "Please fill all fields.";
+          return;
+        }
+        const bodyText = `From: ${name}\n\n${message}`;
+        const mailto = `mailto:ericpesci04@gmail.com?subject=${encodeURIComponent(
+          subject
+        )}&body=${encodeURIComponent(bodyText)}`;
+        window.location.href = mailto;
+        status.textContent = "Opening email client...";
+      }
+    </script>
+    <script src="nav.js" defer></script>
+  </body>
+</html>
